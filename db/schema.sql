@@ -1,16 +1,16 @@
 DROP DATABASE IF EXISTS employees_db;
 
-CREATE employees_db;
+CREATE DATABASE employees_db;
 
 USE employees_db;
 
-CREATE department (
-    id INT NOT NULL, --AUTO_INCREMENT?
+CREATE TABLE department (
+    id INT NOT NULL,
     name VARCHAR(30),
     PRIMARY KEY (id)
 );
 
-CREATE role (
+CREATE TABLE role (
     id INT NOT NULL,
     title VARCHAR(30),
     salary DECIMAL,
@@ -21,7 +21,7 @@ CREATE role (
     ON DELETE SET NULL
 );
 
-CREATE employee (
+CREATE TABLE employee (
     id INT NOT NULL,
     first_name VARCHAR(30),
     last_name VARCHAR(30),
